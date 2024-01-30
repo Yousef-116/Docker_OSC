@@ -23,77 +23,28 @@ docker pull ubuntu:noble
 ## Q4.  Run a container using erseco/alpine-php-webserver image and detach it
 
 ```
-docker run -p 8080 erseco/alpine-php-webserver
+docker run -dp 8080 erseco/alpine-php-webserver
 
 ```
 >image
-![step four image](step_4.1.png)
-![step four image](step_4.2.png)
+![image](Q4.png)
 
-## 5. go back
 
-```
-cd ..
+## Q5.  The above image erseco/alpine-php-webserver is a web server that runs on port 8080, how can we map it to port 55 on our host?
 
 ```
-## 6. Create a Unique Dirctory
+docker run -dp 8080:55 erseco/alpine-php-webserver
 
 ```
-mkdir "-"
+## Q6.  Take a screenshot of the page that is loaded when visiting localhost:55 after running the container in Q5
+![image](Q6.png)
 
-cd Documents/-/
 
-```
->image
-![step four image](step_6.1.png)
-![step four image](step_6.2.png)
+## Q7. Search for the container you ran in Q4 and stop it then delete it
 
-## 7. Copy Directory
 
 ```
-cp -r Documents My_Documnts
-ls
-
-cd My_Documents
-ls
-
+docker ps -a
+docker stop 8576a
+docker rm 8576a
 ```
->image
-![step four image](step_7.png)
-
-## 8. show Hidden Files
-
-```
-ls -a 
-
-```
->image
-![step four image](step_8.png)
-
-## 9. Move files
-
-```
-mv file2.txt ~/Yousef\ Mostafa/
-ls
-
-mv file3.txt ~/Yousef\ Mostafa/
-ls
-
-cd..
-ls
-```
->image
-![step four image](step_9.png)
-
-## 10. Remove your Directory
-
-```
-ls
-
-rm -r "Yousef Mostafa"
-ls
-
-```
->image
-![step four image](step_10.png)
-
