@@ -33,7 +33,7 @@ docker run -dp 8080 erseco/alpine-php-webserver
 ## Q5.  The above image erseco/alpine-php-webserver is a web server that runs on port 8080, how can we map it to port 55 on our host?
 
 ```
-docker run -dp 8080:55 erseco/alpine-php-webserver
+docker run -dp 55:8080 erseco/alpine-php-webserver
 
 ```
 ## Q6.  Take a screenshot of the page that is loaded when visiting localhost:55 after running the container in Q5
