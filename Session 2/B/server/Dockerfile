@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM node:19-alpine 
 
 COPY package.json /app/
 COPY src /app/src
@@ -7,5 +7,5 @@ WORKDIR /app
 
 RUN npm install
 
-CMD [ "node", "app.js" ]
+CMD ["node", "app.js" ]
 
